@@ -1,3 +1,7 @@
+import factoryPattern.Blog;
+import factoryPattern.Shop;
+import factoryPattern.Website;
+import factoryPattern.WebsiteFactory;
 import prototyePattern.Book;
 import prototyePattern.Movie;
 import prototyePattern.Registry;
@@ -64,6 +68,17 @@ public class Main {
         System.out.println(book.getTitle());
         System.out.println(book.getNumberOfPages());
         System.out.println(book.getUrl());
+
+
+        // Factory Pattern
+
+        Website blog = WebsiteFactory.getWebsite("blog");
+
+        System.out.println(blog.getPages());
+
+        Website shop = WebsiteFactory.getWebsite("blog");
+
+        System.out.println(shop.getPages());
 
 
 
